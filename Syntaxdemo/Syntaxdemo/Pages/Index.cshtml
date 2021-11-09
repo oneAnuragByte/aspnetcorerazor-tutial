@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div> 
+    @{
+        var sum = 1+2;
+        var menu = new string[] { "coffee", "cake", "pizza" };
+    }
+
+    <h2>The sum is: @sum</h2>
+    @if(sum > 2)
+    {
+        <p>This was conditionally generated</p>
+    }
+    <ul>
+        @foreach(var item in menu)
+        {
+            <li>@item</li>
+        }
+    </ul>
+</div>
